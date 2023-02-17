@@ -19,7 +19,7 @@ npm run build
 ```
 Run the app
 ```bash
-npm serve
+npm start
 ```
 
 
