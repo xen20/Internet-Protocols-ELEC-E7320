@@ -4,8 +4,8 @@
   "description": "Service for whiteboard client",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/index.js",
-    "build": "tsc ./src/",
+    "build": "tsc",
+    "start": "node ./dist/serve.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
