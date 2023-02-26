@@ -1,0 +1,11 @@
+<h1>Sessions page</h1>
+<% if (data) { %>
+    <p>id: <%= data.id %></p>
+    <p>user: <%=data.name%></p> 
+    <p>Guests: </p>
+    <ul>
+        <% data.guests.forEach(guest => { %>
+            <li><%= guest %></li>
+        <% }); %>
+    </ul>
+<% }%>
