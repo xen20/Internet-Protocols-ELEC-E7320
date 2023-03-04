@@ -15,7 +15,5 @@ export const createSession = async (req: Request, res: Response) => {
     guests: req.body.guests.replace(/[\r\n]+/gm, "").trim().split(";"),
   };
   
-  console.log(data);
-
-  res.render("session", { data });
+  res.render("session", { data })
 };
