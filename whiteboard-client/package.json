@@ -1,24 +1,53 @@
 {
-  "name": "whiteboard-service",
-  "version": "1.0.0",
-  "description": "Service for whiteboard client",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "start": "node ./dist/serve.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "whiteboard-client",
+  "version": "1",
+  "private": true,
   "dependencies": {
-    "@types/uuid": "^9.0.1",
-    "express": "^4.18.2",
-    "socket.io": "^4.6.1",
-    "uuid": "^9.0.0"
+    "@rpldy/upload-button": "^1.4.0",
+    "@rpldy/upload-preview": "^1.4.0",
+    "@rpldy/uploady": "^1.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "bootstrap": "^5.2.3",
+    "gh-pages": "^5.0.0",
+    "nodemon": "^2.0.21",
+    "react": "^18.2.0",
+    "react-color": "^2.19.3",
+    "react-color-palette": "^6.2.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
+    "react-scripts": "5.0.1",
+    "reactcss": "^1.2.3",
+    "roughjs": "^4.5.2",
+    "socket.io-client": "^4.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "@types/express": "^4.17.17",
-    "@types/node": "^18.13.0",
-    "typescript": "^4.9.5"
+    "parcel": "^2.8.3"
   }
 }
