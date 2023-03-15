@@ -30,6 +30,7 @@ const undoMove = (roomId: string, socketId: string) => {
 };
 
 io.on("connection", (socket) => {
+  console.log("Someone connected:", socket.id);
   const getRoomId = () => {
     const joinedRoom = [...socket.rooms].find((room) => room !== socket.id);
 
@@ -51,6 +52,7 @@ io.on("connection", (socket) => {
   };
 
   socket.on("canvas-data", (data) => {
+    console.log("Drawing!!");
     socket.broadcast.emit("canvas-data", data);
   });
 

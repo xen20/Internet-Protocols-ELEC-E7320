@@ -56,7 +56,7 @@ export default function Swatch({
             borderRadius: "10px",
           }}
         >
-          <button
+          {/* <button
             id="brush"
             data-toggle="tooltip"
             data-placement="top"
@@ -69,7 +69,7 @@ export default function Swatch({
             }}
           >
             <Brush toolType={toolType} colorWidth={colorWidth} />
-          </button>
+          </button> */}
 
           <button
             id="writing"
@@ -80,7 +80,7 @@ export default function Swatch({
             onClick={() => {
               return (
                 <Draggable>
-                  <div className="box">I can be dragged anywhere</div>
+                  <div className="box"> Move me</div>
                 </Draggable>
               );
             }}

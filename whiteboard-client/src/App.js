@@ -48,9 +48,16 @@ function App() {
   const [width, setWidth] = useState(1);
   const [shapeWidth, setShapeWidth] = useState(1);
   const [popped, setPopped] = useState(false);
-
+  
   var timeout;
-  var socket = io.connect("http://localhost:3000");
+  var socket = io.connect("http://localhost:3000", {
+    transports: ['websocket']
+  });
+  console.log("am I connect? ", socket.connected);
+
+  socket.on("connect_error", (err) => {
+    console.log(`ws connect_error due to ${err.message}`);
+  });
 
   const updateCanvasWithImage = () => {
     var c = document.getElementById("canvas");
@@ -360,7 +367,9 @@ function App() {
           <UploadButton />
         </Uploady>
       </div>
-
+      <Draggable>
+        <div className="box">I can be dragged anywhere</div>
+      </Draggable>
       <canvas
         id="canvas"
         className="App"
